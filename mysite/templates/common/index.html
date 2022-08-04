@@ -1,0 +1,100 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+<script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="{% static '/favicon.ico' %}" />
+    <link rel="stylesheet" href="{% static '/css/common.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/signin.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/register.css' %}" />
+
+    <script src="{% static '/js/register.js' %}" defer></script>
+  </head>
+  <body>
+    <div class="signin-wrap">
+      <a href="https://hi1004.github.io/Jbit-IT-Group2-HomePage" class="logo"
+        ><img src="{% static '/images/sigin_logo.png' %}" alt="logo"
+      /></a>
+
+      <div class="signin-container">
+        <div class="card"></div>
+
+        <div class="card">
+          <form method="post" class="post-form" action="{% url 'common:login' %}">
+            {% csrf_token %}
+            <h2 class="form-title">LOGIN</h2>
+            <ul class="form-menu">
+              <li>
+                <input type="text" class="form-control" name="username" id="username"
+                       required autofocus autocomplete="off" data-ms-editor="true"
+                        value="{{ form.username.value|default_if_none:'' }}" />
+                <label for="username">Username</label>
+                <div class="bar"></div>
+              </li>
+              <li>
+                <input type="password" name="password" id="password" required
+                        value="{{ form.password.value|default_if_none:'' }}"/>
+                <label for="password">Password</label>
+                <div class="bar"></div>
+              </li>
+            </ul>
+            <div class="btn-container">
+              <button type="submit" class="btn"><span>GO</span></button>
+            </div>
+
+            <a href="javascript:void(0)" class="forgot-password">Forgot Your Password</a>
+          </form>
+        </div>
+
+        <div class="card register">
+          <div class="toggle"></div>
+          <h1 class="title">
+            Register
+            <div class="close"></div>
+          </h1>
+          <form>
+            <div class="register-container">
+              <ul class="form-menu">
+                <li>
+                  <input type="text" id="register-user-name" required autocomplete="off" />
+                  <label for="register-user-name">Username</label>
+                  <div class="bar"></div>
+                </li>
+                <li>
+                  <input type="password" id="register-user-password" required />
+                  <label for="register-user-password">Password</label>
+                  <div class="bar"></div>
+                </li>
+                <li>
+                  <input type="password" id="register-repeat-user-password" required />
+                  <label for="register-repeat-user-password">Repeat Password</label>
+                  <div class="bar"></div>
+                </li>
+              </ul>
+              <div class="btn-container">
+                <button type="submit" class="btn"><span>NEXT</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="img-container">
+        <img src="{% static '/images/hcjg.jpg' %}" alt="hcjg기술" />
+        <img src="{% static '/images/Recruitment.jpg' %}" alt="모집" />
+      </div>
+      <footer id="signin-footer">
+        <p class="copyright">&copy;COPYRIGHT 2021. J-BIT UNITED IT. ALL RIGHTS RESERVED.</p>
+      </footer>
+    </div>
+  </body>
+</html>

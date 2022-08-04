@@ -1,0 +1,21 @@
+.about-wrap {
+  position: relative;
+  background-color: #21395b;
+}
+
+/* ABOUT IMAGES */
+.images-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.images-wrap img {
+  width: 90%;
+  height: 100vh;
+  padding: 70px;
+  box-sizing: border-box;
+}
+.images-wrap img:last-child {
+  margin-bottom: 100px;
+}

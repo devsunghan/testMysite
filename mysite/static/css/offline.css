@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "EliceDigitalBaeum_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+* {
+  box-shadow: border-box;
+}
+body {
+  background-color: #213a5c;
+}
+.offline-wrap {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(163, 181, 192, 1) 0%, #213a5c 100%);
+}
+.offline-contents-wrap {
+  width: calc(100% - 200px);
+  float: right;
+  margin-bottom: 100px;
+}
+.offline-contents-wrap .offline-contents {
+  width: 1500px;
+  background: linear-gradient(45deg, #b5c7d8, #eee, #b5c7d8);
+  /* background-color: #b5c7d8; */
+  border-radius: 20px;
+  margin: 60px auto;
+  padding: 20px 0;
+}
+
+/*offline css*/
+.offline1 {
+  margin: 0 auto;
+}
+
+h1 {
+  height: 150px;
+  text-align: center;
+  color: #213a5c;
+  font-size: 60px;
+  font-family: arial, helvetica, sans-serif;
+  /* line-height: 150px; */
+  font-weight: bold;
+  text-shadow: 5px 5px 10px rgbA(33, 58, 92, 0.5);
+}
+
+h2 {
+  text-align: left;
+  text-indent: 50px;
+  color: #213a5c;
+  font-size: 40px;
+  line-height: 80px;
+}
+
+p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+}
+
+.sub-contend {
+  text-align: left;
+  text-indent: 30px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.offline-img-title {
+  background-color: #213a5c;
+  color: white;
+}
+
+.offline-img-title {
+  font-family: "EliceDigitalBaeum_Bold";
+  font-size: 20px;
+}
+
+.date {
+  font-size: 15px;
+}
+
+.scale {
+  display: block;
+  margin: 0 auto;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.scale:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.offline-contents-wrap img {
+  width: 350px;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.offline-img {
+  width: 350px;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.offline-1st {
+  /* height: 600px; */
+  display: flex;
+  justify-content: space-around;
+}
+.offline-1st:first-child {
+  margin-bottom: 50px;
+}
+
+.offline-day-wrap {
+  padding: 30px;
+  width: 350px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 10px rgba(200, 200, 200, 1);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.offline-day-wrap:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #0e2038;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer .copyright {
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  color: rgba(216, 215, 215, 0.596);
+}

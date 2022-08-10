@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+div {
+    font-family: "나눔고딕";
+    line-height: 1.7;
+    color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+img { 
+    max-width: 100%;
+}
+
+.logo {
+    width: 50px;
+    margin-top: -5px;
+    background-image: url('/tomo.png');
+    background-color: rgb(77, 77, 77);
+    background-blend-mode: multiply;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0;
+    padding: 0 4%;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.main-nav a {
+    color: white;
+}
+
+.line {
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(77, 77, 77);
+}
+
+.search-box {
+    position: absolute;
+    top: 6%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(99, 99, 99);
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+  }
+  .search-btn {
+    color: #EDEDED;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #949BA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-txt {
+    float: left;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
+  }
+
+  .search-box:hover > form .search-txt {
+    width: 250px;
+  }
+
+
+  input::placeholder {
+    color: white;
+  }
